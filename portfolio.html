@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beau Sison - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">BEAU LAWYJET L SISON</span>
+                <span class="logo-accent">SOFTWARE ENGINEER</span>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Profile <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="experience.html" class="active">Experience</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Resources <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="certifications.html">Certifications</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Header-->  
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Portfolio</h1>
+            <p class="page-subtitle">Existing and Future Projects</p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-section">
+        <div class="container">
+            <!-- Existing Projects -->
+            <h2>Existing Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="projects/orakulo.html" class="project-card">
+                    <div class="project-image">
+                        <img src="orakulo.png" alt="orakulo-project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Orakulo: Online Movie-renting System - SQL</h3>
+                        <p class="developers">Developed By: John Julius C. David, Christopherson C. Labios, Beau Lawyjet L. Sison, Marwin P. Panganiban, Gabriel P. Llanera</p>
+                        <p class="completion-date">Completed: November, 2023</p>
+                        <p class="project-description">
+                            This project builds a simple movie rental database that tracks customers, movies, orders, and order items. 
+                            It uses SQL to retrieve records, update data, insert new entries, and combine tables to produce reports. 
+                            The work shows how a rental shop manages inventory, payments, and customer activity through database operations.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->  
+                <a href="projects/compgraph.html" class="project-card">
+                    <div class="project-image">
+                        <img src="compgraph.png" alt="duel-game-project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Simple Duel Game - C and OpenGL</h3>
+                        <p class="developers">Developed By: Marielle Basanes, Julian Onate, Mohammad Rafi Saiyari, Beau Lawyjet Sison</p>
+                        <p class="completion-date">Completed: December, 2024</p>
+                        <p class="project-description">
+                            This 2D dueling game was a final project for my Computer Graphics course, built using C++ with OpenGL and GLUT. 
+                            Two local players control a Fire Mage and an Ice Mage, launching projectiles in real-time to deplete the opponent's health bar. 
+                            The game features 2D sprite animations, collision detection, and dynamic transformations to create an interactive battle scene.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="projects/bloomsentry.html" class="project-card">
+                    <div class="project-image">
+                        <img src="bloomsentry.png" alt="bloomsentry-project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Bloomsentry: An Algal Bloom Prediction System for Laguna Lake - Python</h3>
+                        <p class="developers">Developed By: Franz Benjamin Africano, Matt Terrence Rias, Mohammad Rafi Saiyari, Beau Lawyjet Sison</p>
+                        <p class="completion-date">Completed: March, 2025</p>
+                        <p class="project-description">
+                            "BloomSentry" is our undergraduate thesis project that predicts harmful algal blooms in Laguna Lake using machine learning. 
+                            We developed a Gradient Boosting Regression (GBR) model in Python to forecast key algal parameters based on historical environmental data. 
+                            The resulting model serves as a proof-of-concept for an early warning system to help stakeholders mitigate ecological and economic damage.
+                        </p>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Future Projects -->
+            <br><br><h2>Future Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="projects/futureproj.html" class="project-card">
+                    <div class="project-image">
+                        <img src="mercer.png" alt="mercer-project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Mercer: A Personal AI Assistant</h3>
+                        <p class="developers">Developed By:Beau Lawyjet L. Sison</p>
+                        <p class="completion-date">Completed: TBA</p>
+                        <p class="project-description">
+                            The Mercer Project is my upcoming endeavor to build a personal AI assistant that runs entirely locally on my PC, ensuring complete data privacy and offline functionality. 
+                            This AI will be designed to learn my specific workflows, manage local files, and automate personalized tasks without relying on cloud services. 
+                            It will be an exploration into integrating compact, powerful language models directly into a desktop environment for ultimate customization and control.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Footer--> 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Beau Lawyjet Sison. All rights reserved.</p>
+            <p class="footer-tagline">Draco dormiens nunquam titillandus</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

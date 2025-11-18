@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Online Movie Rental System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">BEAU LAWYJET L SISON</span>
+                <span class="logo-accent">SOFTWARE ENGINEER</span>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Profile <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../education.html">Education</a></li>
+                        <li><a href="../experience.html" class="active">Experience</a></li>
+                        <li><a href="../skills.html">Skills</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Resources <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../certifications.html">Certifications</a></li>
+                    </ul>
+                </li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Header-->  
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Online Movie Rental System</h1>
+            <p class="page-subtitle">Using SQL and Oracle Database</p>
+        </div>
+    </section>
+
+    <!--Page Content-->
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="project-detail-grid">
+                <div class="project-screenshot">
+                    <img src="../orakulo.png" alt="Simple Duel Game Screenshot">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Online Movie Rental System</h2>
+                    <p class="developers"><strong>Developers: </strong>John Julius C. David, Christopherson C. Labios, Beau Lawyjet L. Sison, Marwin P. Panganiban, Gabriel P. Llanera</p>
+                    <p class="completion-date"><strong>Completion Date: </strong>November, 2023</p>
+                     This project is a comprehensive relational database system designed for "Orakulo," a conceptual online media rental store. Adapting business rules from an online bookstore, this system provides the backend logic for managing movies, customers, and orders. The project was built using Oracle Database and demonstrates a thorough understanding of data modeling, business rule implementation, and complex SQL querying to solve realistic business problems.
+                    </p>
+
+                    <!-- === START OF INSERTED DOCUMENTATION === -->
+
+                    <h2>Project Objectives</h2>
+                    <div class="indent">
+                        <ol>
+                            <li>To design and implement a relational database schema in Oracle based on a set of business rules.</li>
+                            <li>To normalize the database structure to reduce redundancy and improve data integrity.</li>
+                            <li>To create and populate database tables with realistic, sample data for movies, orders, and customers.</li>
+                            <li>To demonstrate proficiency in SQL (DDL and DML) for creating, managing, and manipulating database objects.</li>
+                            <li>To solve specific business problems by writing complex, multi-table SQL queries.</li>
+                            <li>To fulfill the final project requirement for the Information Management (CCS0021L) course.</li>
+                        </ol>
+                    </div>
+
+                    <h2>Technologies Used</h2>
+                    <div class="indent2">
+                        <ul>
+                            <li><strong>Database:</strong>
+                                <div class="indent2">
+                                    <ul>
+                                        <li>Oracle Database</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><strong>Language:</strong>
+                                <div class="indent2">
+                                    <ul>
+                                        <li>SQL (Structured Query Language)</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><strong>Development Environment:</strong>
+                                <div class="indent2">
+                                    <ul>
+                                        <li>Oracle SQL Developer (or similar database management tool)</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2>Database Structure Highlights</h2>
+                    <p>The system was built around a set of core tables to manage the rental process:</p>
+                    <div class="indent">
+                        <ol>
+                            <li><strong>MYORDER:</strong> Stores high-level information about each order, such as the order date and the delivery channel.</li>
+                            <li><strong>ORDERITEM:</strong> A junction table that links an order (`ORDERID`) to a specific movie (`MOVIEID`) and includes details like quantity and rental fee.</li>
+                            <li><strong>MOVIE:</strong> A master table holding all details for a movie, such as its title, genre, and other attributes.</li>
+                            <li>(Other tables for Customers, Payments, etc. would also be part of the full schema)</li>
+                        </ol>
+                    </div>
+
+                    <h2>SQL Query Showcase</h2>
+                    <p>A key part of the project was developing queries to retrieve meaningful data. Below are two examples from the project:</p>
+                    
+                    <h3>Query 1: Orders by Delivery Channel</h3>
+                    <p><strong>Goal:</strong> To display the movie titles, quantities, and rental fees for all items that were processed via 'Postal Delivery'.</p>
+                    <div class="indent2">
+                        <ul>
+                            <li><strong>Tables Joined:</strong> `MOVIE`, `ORDERITEM`, `MYORDER`</li>
+                            <li><strong>Key Logic:</strong> Uses `WHERE` clauses to join the three tables on their respective keys and filters the results where `MYORDER.DELIVERYCHANNEL = 'Postal Delivery'`.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Query 2: High-Quantity Orders</h3>
+                    <p><strong>Goal:</strong> To find all movies that were rented in large quantities (greater than 2) and display the movie title, quantity, and the date the order was placed.</p>
+                    <div class="indent2">
+                        <ul>
+                            <li><strong>Tables Joined:</strong> `MOVIE`, `ORDERITEM`, `MYORDER`</li>
+                            <li><strong>Key Logic:</strong> Joins the three tables and filters the results where `ORDERITEM.QUANTITY > 2`.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Conclusion</h2>
+                    <p>This project successfully demonstrates the design, implementation, and querying of a relational database in an Oracle environment. The resulting database system correctly models the business rules of an online media rental store and provides the necessary SQL logic to retrieve critical business intelligence, fulfilling all requirements for the final project.</p>
+                    
+                    <!-- === END OF INSERTED DOCUMENTATION === -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer--> 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Beau Lawyjet Sison. All rights reserved.</p>
+            <p class="footer-tagline">Draco dormiens nunquam titillandus</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

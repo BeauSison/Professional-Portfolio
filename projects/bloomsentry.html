@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bloom Sentry</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">BEAU LAWYJET L SISON</span>
+                <span class="logo-accent">SOFTWARE ENGINEER</span>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Profile <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../education.html">Education</a></li>
+                        <li><a href="../experience.html" class="active">Experience</a></li>
+                        <li><a href="../skills.html">Skills</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Resources <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../certifications.html">Certifications</a></li>
+                    </ul>
+                </li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Header-->  
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Bloom Sentry</h1>
+            <p class="page-subtitle">An Algal Bloom Prediction System for Laguna Lake</p>
+        </div>
+    </section>
+
+    <!--Page Content-->
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="project-detail-grid">
+                <div class="project-screenshot">
+                    <img src="../bloomsentry.png" alt="Bloom Sentry Project Screenshot">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Bloom Sentry</h2>
+                    <p class="developers"><strong>Developers: </strong>Franz Benjamin Africano, Matt Terrence Rias, Mohammad Rafi Saiyari, Beau Lawyjet Sison</p>
+                    <p class="completion-date"><strong>Completion Date: </strong>July, 2025</p>
+                    <p class="project-description">
+                        This undergraduate thesis project focuses on developing a predictive model for algal blooms in Laguna Lake, a critical environmental issue. The project utilizes the Gradient Boosting Regression (GBR) algorithm to forecast the levels of algal bloom-causing parameters, specifically chlorophyll-a and phytoplankton. By analyzing historical data on water quality, nutrients, and weather patterns provided by the Laguna Lake Development Authority (LLDA) and PAGASA, this research aims to create a tool that can provide early warnings, enabling proactive measures to mitigate the ecological and economic damage caused by harmful algal blooms (HABs).
+                    </p>
+
+                    <!-- === START OF EXPANDED DOCUMENTATION === -->
+
+                    <h2>Statement of the Problem</h2>
+                    <p>This study aimed to develop a predictive model to forecast algal bloom occurrences in Laguna Lake. It sought to answer the following questions:</p>
+                    <div class="indent">
+                        <ol>
+                            <li>What are the significant parameters (e.g., pH, temperature, nitrate, phosphate) that correlate with algal blooms?</li>
+                            <li>How can a Gradient Boosting Regression (GBR) model be developed and trained to predict algal bloom indicators (chlorophyll-a and phytoplankton) using historical data?</li>
+                            <li>What is the performance level of the developed GBR model in terms of accuracy, precision, and error (MAE, MSE, R²)?</li>
+                            <li>How can the model be implemented into a functional tool to serve as an early warning system for stakeholders like the LLDA?</li>
+                        </ol>
+                    </div>
+
+                    <h2>Scope and Limitations</h2>
+                    <p>This research is subject to the following scope and limitations:</p>
+                    <div class="indent">
+                        <ul>
+                            <li><strong>Data Dependency:</strong> The model's accuracy is entirely dependent on the quality, completeness, and timeframe of the historical data provided by the LLDA and PAGASA.</li>
+                            <li><strong>Geographic Scope:</strong> The study focuses exclusively on Laguna Lake and its designated monitoring stations. The findings may not be generalizable to other bodies of water without retraining.</li>
+                            <li><strong>Model Focus:</strong> The project implements Gradient Boosting Regression (GBR). While other machine learning models exist, the scope is limited to the implementation and evaluation of GBR.</li>
+                            <li><strong>Output:</strong> The primary output is a predictive model. The development of a full-scale, real-time, user-facing application (like a web or mobile app) is considered a future enhancement, not part of the core thesis delivery.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Technologies & Methodology</h2>
+                    <p>The project followed a quantitative, correlational research design to determine the relationship between environmental variables and algal bloom indicators.</p>
+                    <div class="indent2">
+                        <ul>
+                            <li><strong>Core Technologies:</strong>
+                                <div class="indent2">
+                                    <ul>
+                                        <li><strong>Language:</strong> Python</li>
+                                        <li><strong>Core Libraries:</strong> Pandas, NumPy, Scikit-learn</li>
+                                        <li><strong>ML Algorithm:</strong> Gradient Boosting Regression (GBR)</li>
+                                        <li><strong>Data Visualization:</strong> Matplotlib, Seaborn</li>
+                                        <li><strong>Analysis:</strong> Pearson's R correlation</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><strong>Methodology:</strong>
+                                <div class="indent2">
+                                    <ol>
+                                        <li><strong>Data Collection:</strong> Acquired historical water quality data (Phosphate, Nitrate, pH, Temperature, Chlorophyll-a, Phytoplankton) from LLDA and meteorological data (Rainfall, Wind Speed) from PAGASA.</li>
+                                        <li><strong>Data Preprocessing:</strong> Cleaned the dataset by handling missing values through interpolation. Merged and synchronized datasets from the two different sources.</li>
+                                        <li><strong>Feature Engineering & Selection:</strong> Applied Pearson's R correlation to identify and select the most significant environmental parameters that influence algal blooms.</li>
+                                        <li><strong>Model Training:</strong> Split the processed data into training (80%) and testing (20%) sets. Implemented and trained the Gradient Boosting Regression (GBR) model on the training data.</li>
+                                        <li><strong>Model Evaluation:</strong> Assessed the model's predictive performance on the unseen test data using standard regression metrics: Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared (R²) to determine its accuracy and reliability.</li>
+                                    </ol>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2>Key Findings & Conclusion</h2>
+                    <p>The research successfully demonstrated that a Gradient Boosting Regression model can be effectively utilized to predict algal bloom indicators in Laguna Lake with a significant degree of accuracy. The model confirmed a strong, predictable relationship between key environmental factors and the proliferation of algae.</p>
+                    <div class="indent">
+                        <ul>
+                            <li>The model achieved a high R-squared (R²) value, indicating that it could explain a large portion of the variance in the algal bloom data, proving its viability as a forecasting tool.</li>
+                            <li>Key parameters, particularly <strong>Phosphate</strong>, <strong>Nitrate</strong>, and <strong>Water Temperature</strong>, were statistically confirmed as the most significant predictors of algal bloom events in Laguna Lake.</li>
+                            <li>The project concludes that machine learning provides a powerful, data-driven, and cost-effective method for environmental monitoring. The developed model can serve as the core component of an early warning system, enabling the LLDA and other stakeholders to transition from reactive to proactive management of harmful algal blooms.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- === END OF EXPANDED DOCUMENTATION === -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer--> 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Beau Lawyjet Sison. All rights reserved.</p>
+            <p class="footer-tagline">Draco dormiens nunquam titillandus</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

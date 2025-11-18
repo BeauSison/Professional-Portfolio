@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Simple Duel Game Project</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">BEAU LAWYJET L SISON</span>
+                <span class="logo-accent">SOFTWARE ENGINEER</span>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Profile <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../education.html">Education</a></li>
+                        <li><a href="../experience.html" class="active">Experience</a></li>
+                        <li><a href="../skills.html">Skills</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Resources <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../certifications.html">Certifications</a></li>
+                    </ul>
+                </li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Header-->  
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Simple Duel Game Project</h1>
+            <p class="page-subtitle">Using OpenGL and C</p>
+        </div>
+    </section>
+
+    <!--Page Content-->
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="project-detail-grid">
+                <div class="project-screenshot">
+                    <img src="../compgraph.png" alt="Simple Duel Game Screenshot">
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Simple Duel Game Project</h2>
+                    <p class="developers"><strong>Developers: </strong>Marielle Basanes, Julian Onate, Mohammad Rafi Saiyari, Beau Lawyjet Sison</p>
+                    <p class="completion-date"><strong>Completion Date: </strong>December, 2024</p>
+                    <p class="project-description">
+                            The scene depicts two mage characters, the fire mage and the ice mage, engaged in a battle for a magical artifact located at the center of a mountainous landscape. The environment features mountains, a sea, and a clear sky with clouds, providing a visually appealing backdrop for the action. Each mage has a health bar that visibly decreases whenever they are hit and pushes them backward to demonstrate the impact of their spells. Users can control the fire and ice mage characters using a specific button to cast spells during the battle. The magical artifact at the center can change size using the middle scroll wheel and has glowing rays rotating behind it. This artifact serves as the focal point of the fight as both characters strive to claim it for themselves.
+                    </p>
+
+                    <!-- === START OF INSERTED DOCUMENTATION === -->
+
+                    <h2>Project Objectives</h2>
+
+                        <div class="indent">
+                            <ol>
+                                <li>To create a 2-player local dueling game using C++ and OpenGL.</li>
+                                <li>To demonstrate proficiency in 2D graphics rendering using OpenGL primitives.</li>
+                                <li>To implement fundamental computer graphics transformations (glTranslate, glScale, glRotate) to animate scene objects.</li>
+                                <li>To manage a real-time game state, including player health, attack animations, collision detection, and a game-over condition.</li>
+                                <li>To handle simultaneous user input for two players via the keyboard and additional input via the mouse.</li>
+                                <li>To create a dynamic 2D scene with animated elements, including projectiles, background elements, and character feedback.</li>
+                            </ol>
+                        </div>
+
+                    <h2>Technologies Used</h2>
+                    <div class="indent2">
+                        <ul>
+                            <li><strong>Core Technologies:</strong>
+                                <div class="indent2">
+                                    <ul>
+                                        <li>Language: C++</li>
+                                        <li>Graphics API: OpenGL (utilizing immediate mode `glBegin`/`glEnd`)</li>
+                                        <li>Windowing & Context: GLUT (freeglut)</li>
+                                        <li>OpenGL Extension Loading: GLEW (The OpenGL Extension Wrangler Library)</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><strong>Development Environment:</strong>
+                                <div class="indent2">
+                                    <ul>
+                                        <li>IDE: Dev-C++</li>
+                                        <li>Compiler: g++ (MinGW)</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2>Game Scene & Objects</h2>
+                    <p>The game scene is composed of five primary object categories:</p>
+                    <div class="indent">
+                        <ol>
+                            <li><strong>Characters:</strong> The Fire Mage (Player 1) and the Ice Mage (Player 2).</li>
+                            <li><strong>Environment:</strong> A static backdrop featuring mountains, a sea, and a sky.</li>
+                            <li><strong>Dynamic Elements:</strong> Animated clouds moving in the background and attack projectiles (beams) fired by the mages.</li>
+                            <li><strong>Central Object:</strong> A magical artifact that serves as the scene's focal point.</li>
+                            <li><strong>UI Elements:</strong> Player health bars (for Fire Mage and Ice Mage) and a text-based "Game Over" screen that declares the winner.</li>
+                        </ol>
+                    </div>
+
+                    <h2>Key Features</h2>
+                    <div class="indent">
+                        <ol>
+                            <li>Two-Player Local Combat: Allows two players to compete against each other on the same keyboard.</li>
+                            <li>Health System: Both mages have a health bar that visually depletes from 100 to 0.</li>
+                            <li>Attack Animation: Players can launch a "beam" projectile that travels across the screen.</li>
+                            <li>Collision Detection: The game logic checks if a projectile has reached the opponent's position, triggering a health reduction.</li>
+                            <li>Game Over State: When a player's health reaches zero, the game stops, and a "Game Over" message displays the winner.</li>
+                            <li>Reset Functionality: Players can reset the game at any time to start a new match.</li>
+                            <li>Dynamic Environment: Includes simple background animations (moving clouds) and a central "artifact" that can be resized.</li>
+                            <li>Fullscreen Mode: Players can toggle between windowed and fullscreen mode.</li>
+                        </ol>
+                    </div>
+                    
+                    <h2>OpenGL Implementation & Functionality</h2>
+                    <p>This project utilizes core OpenGL fixed-function pipeline features to achieve its visuals and animations.</p>
+                    <h3>OpenGL Transformations Implemented</h3>
+                    <p>There are five objects: the two mages, the magical artifact, the glowing rays, and the clouds. Each object utilizes different transformations:</p>
+                    <div class="indent2">
+                        <ul>
+                            <li><strong>glTranslate:</strong> Controls the movement of the mages as they are pushed back when hit. It also animates their hands during spell casting and the horizontal movement of the clouds in the background.</li>
+                            <li><strong>glScale:</strong> Changes the size of the magical artifact, allowing it to grow or shrink based on mouse wheel input.</li>
+                            <li><strong>glRotate:</strong> Animates the glowing rays around the artifact, creating a continuous rotating visual effect.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Controls</h2>
+                    <p>The game is controlled via the keyboard and mouse.</p>
+                    <h3>Keyboard Controls</h3>
+                    <table class="controls-table">
+                        <thead>
+                            <tr>
+                                <th>Key</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>`a`</strong></td>
+                                <td>Player 1 (Fire Mage) - Attack</td>
+                            </tr>
+                            <tr>
+                                <td><strong>`l`</strong></td>
+                                <td>Player 2 (Ice Mage) - Attack</td>
+                            </tr>
+                            <tr>
+                                G<td><strong>`r`</strong></td>
+                                <td>Reset Game - Resets health and positions for a new game.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>`f`</strong></td>
+                                <td>Toggle Fullscreen - Switches between fullscreen and windowed mode.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>`ESC`</strong></td>
+                                <td>Exit Game - Closes the application.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Mouse Controls</h3>
+                    <table class="controls-table">
+                         <thead>
+                            <tr>
+                                <th>Input</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mouse Wheel Up</strong></td>
+                                <td>Increase the size of the central artifact.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mouse Wheel Down</strong></td>
+                                <td>Decrease the size of the central artifact.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Future Enhancements</h2>
+                    <p>While the core functionality is complete, future enhancements could include:</p>
+                    <div class="indent2">
+                        <ul>
+                            <li>Implementation of sound effects for spells, impacts, and a "Game Over" sound.</li>
+                            <li>Addition of a main menu screen and a pause functionality.</li>
+                            <li>Player-controlled character movement (forward/backward) to add a layer of strategy.</li>
+                            <li>Refactoring the immediate mode OpenGL (`glBegin`/`glEnd`) to use modern buffer-based rendering (VBOs/VAOs) for improved performance.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Conclusion</h2>
+                    <p>This project successfully implements the core requirements of a simple 2D game using C++ and OpenGL. It demonstrates a practical understanding of 2D graphics principles, including shape rendering, transformations, color, user input handling (keyboard and mouse), and state-based animation and game logic.</p>
+                    <p>The game effectively creates an engaging duel scenario with clear visual feedback for player actions, health, and game status, fulfilling all objectives set for the Computer Graphics final project.</p>
+                    
+                    <!-- === END OF INSERTED DOCUMENTATION === -->
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer--> 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Beau Lawyjet Sison. All rights reserved.</p>
+            <p class="footer-tagline">Draco dormiens nunquam titillandus</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
